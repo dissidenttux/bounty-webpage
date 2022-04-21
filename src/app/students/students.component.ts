@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Student } from '../student';
+import { Bounties } from '../bounties';
 
-import { STUDENTS } from '../mock-students';
+import { BOUNTIES } from '../mock-bounties';
 
 @Component({
   selector: 'app-students',
@@ -9,16 +9,16 @@ import { STUDENTS } from '../mock-students';
   styleUrls: ['./students.component.css']
 })
 export class StudentsComponent implements OnInit {
-  students = STUDENTS;
+  bounties = BOUNTIES;
 
-  selectedStudent?: Student;
+  selectedBounty?: Bounties;
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  onSelect(student: Student): void {
-    this.selectedStudent = student;
+  onSelect(bounty: Bounties): void {
+    this.selectedBounty = bounty;
   }
 }

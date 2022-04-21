@@ -1,19 +1,20 @@
-<h2>Students</h2>
-<ul class="students">
-    <li *ngFor="let student of students" (click)="onSelect(student)">
-        <span class="badge">{{student.id}}</span>
-        {{student.name}} | 
-        <i>{{student.major}}</i>
+<h2>Bounties</h2>
+<ul class="bounties">
+    <li *ngFor="let bounty of bounties" (click)="onSelect(bounty)">
+        <span class="badge">{{bounty.id}}</span>
+        {{bounty.name}} |
+        <i>{{bounty.status}}</i>
     </li>
 </ul>
 
-<div *ngIf="selectedStudent">
+<div *ngIf="selectedBounty">
 
-    <h2>{{selectedStudent.name}} Details</h2>
-    <div><span>id: </span>{{selectedStudent.id}}</div>
+    <h2>{{selectedBounty.name}} Details</h2>
+    <div><span>id: </span>{{selectedBounty.id}}</div>
+    <div><span>price: </span>{{selectedBounty.price}} | Republic Credits</div>
     <div>
-      <label>major:
-        <input [(ngModel)]="selectedStudent.major" placeholder="major"/>
+      <label>Status:
+        <input [(ngModel)]="selectedBounty.status" placeholder="Pending"/>
       </label>
     </div>
   
